@@ -5,6 +5,8 @@ body {
     background-color: white;
     width: 1510px;
     margin: auto;
+    position: relative;
+    z-index: -2;
 }
 /* .banner {
     height: 1026px;
@@ -81,7 +83,7 @@ h5 {
 }
 .red_line {
     align-self: center;
-    width: 150px;
+    width: 170px;
     border-top: 1px solid #EC7979;
 }
 .group_box {
@@ -138,14 +140,13 @@ button {
     width: 270px;
     background-color: #EC7979;
     color: white;
-    cursor: pointer;
     font-size: 18px;
     font-weight: 600;
 }
-.download_button:hover{
+.download_button:hover, .send_message_button:hover{
     background-color: #AB4949;
 }
-.download_button:active {
+.download_button:active, .send_message_button:active{
     background-color: #EC7979;
     box-shadow: inset 0px 0px 10px #AB4949;
     transform: scale(0.9);
@@ -202,7 +203,7 @@ li:active {
     background-color: #F5F5F5;
     transform: scale(1.02);
 }
-.price .box:hover {
+.price_section .box:hover {
     align-self: flex-start;
     box-shadow: 0px 4px 10px #929292;
     transform: translateY(-30px);
@@ -240,9 +241,128 @@ li:active {
     border: 15px solid transparent;
     border-top: 20px solid #E2E2E2; 
 }
-
-/* footer {
+.axure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: raleway;
+    color: #FFFFFF;
+    position: relative;
+}
+.axure::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    z-index: -1;
+    background-image: url(/img/image_stylish.png);
+    filter: brightness(50%);
+}
+.download_button_2 {
+    margin: 73px 0 50px 0;
+    height: 58px;
+    width: 370px;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.download_button_2:hover {
+    border: 2px solid #EC7979;
+    color: #EC7979;
+}
+.download_button_2:active {
+    background-color: #AB4949;
+    border: none;
+    color: white;
+}    
+.white_line {
+    align-self: center;
+    width: 170px;
+    border-top: 1px solid #FFFFFF;
+}
+.h5_under_white_line {
+    color: #FFFFFF;
+}
+.contact_us_section {
+    width: 1170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input_section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.input_contacts, .input_message {
+    width: 570px;
+    height: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.input_message {    
+    align-self: self-end;
+}
+input {
+    font-size: 30px;
+    height: 60px;
+    border: transparent;
+    border-bottom: 1px solid #BDBDBD;
+    outline: none;
+}
+::placeholder {
+    color: #BDBDBD;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+textarea::placeholder {
+    transform: translateY(24px);
+}
+textarea {
+    font-size: 30px;
+    width: 570px;
+    height: 100%;
+    border: transparent;
+    border-bottom: 1px solid #BDBDBD;
+    resize: none;
+    outline: none;
+}
+.send_message_button {
+    width: 370px;
+    height: 58px;
+    background-color: #EC7979;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 50px 0;
+}
+footer {
     height: 164px;
     background-color: black;
     margin-top: 50px;
-} */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.links {
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.copyright {
+    font-family: raleway;
+    color: #8d8d8d;
+    margin: 0;
+}
+.links img {
+    width: 53px;
+    height: 53px;
+}
+.links img:hover {
+    cursor: pointer;
+}
