@@ -1,5 +1,5 @@
 html {
-    background-color: black;
+    background-color: rgb(28, 28, 28);
 }
 body {
     background-color: white;
@@ -7,15 +7,67 @@ body {
     margin: auto;
     position: relative;
     z-index: -2;
+    font-family: raleway;
 }
-/* .banner {
+.banner {
     height: 1026px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    position: relative;
 }
-.social {
-    height: 140px;
-    background-color: #F8EFEF;
-    text-align: center;
-} */
+.banner::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    z-index: -1;
+    background-image: url(../img/image_axit.png);
+    filter: brightness(50%);
+}
+.banner_content {
+    height: 600px;
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.banner_text {
+    height: 100%;
+    width: 670px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.banner_content form {
+    height: 450px;
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    color: black;
+}
+form span {
+    color: #EC7979;
+}
+form button {
+    height: 60px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #EC7979;
+    color: #FFFFFF;
+    border-radius: 0 0 10px 10px;
+}
+form h4 {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -23,6 +75,26 @@ body {
     font-family: raleway;
     width: 1170px;
     margin: auto;
+}
+.social_section {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    background-color: #F8EFEF;
+}
+.social_content {
+    width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social_text {
+    width: 470px;
+    margin-bottom: 18px;
+}
+.social_content h5 {
+    color: #86878B;
+    margin: 0;
 }
 .content_freedom {
     display: flex;
@@ -41,6 +113,12 @@ body {
 .price_section {
     width: 1508px;
     background-color: #F5F5F5;
+}
+h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    margin: 0;
 }
 h2 {
     display: flex;
@@ -73,7 +151,7 @@ h5 {
     font-weight: 400;
     font-style: normal;
     line-height: 21px;
-    margin: 40px 0 0 0;
+    margin: 0;
 }
 .h5_under_line {
     color: #86878B;
@@ -85,6 +163,7 @@ h5 {
     align-self: center;
     width: 170px;
     border-top: 1px solid #EC7979;
+    margin-bottom: 40px;
 }
 .group_box {
     display: flex;
@@ -117,10 +196,10 @@ button {
     width: 200px;
     background-color: white;
 }
-.tabs button:hover {
+.tabs button:hover:not(.tab_1){
     background-color: #C6CBCD;
 }
-.tab_1, .tabs button:active {
+.tab_1, .tabs button:active:not(.tab_1) {
     background-color: white;
     border: 1px solid #C6CBCD;
     border-bottom: none;
@@ -143,13 +222,16 @@ button {
     font-size: 18px;
     font-weight: 600;
 }
-.download_button:hover, .send_message_button:hover{
+.download_button:hover, 
+.send_message_button:hover, 
+form button:hover {
     background-color: #AB4949;
 }
-.download_button:active, .send_message_button:active{
+.download_button:active, 
+.send_message_button:active, 
+form button:active {
     background-color: #EC7979;
     box-shadow: inset 0px 0px 10px #AB4949;
-    transform: scale(0.9);
 }
 .box_price div {
     display: flex;
@@ -170,7 +252,6 @@ button {
     height: 100px;
     font-size: 36px;
     font-weight: 700;
-    font-family: Raleway;
 }
 .box_price div:nth-child(3) {
     height: 50px;
@@ -245,7 +326,6 @@ li:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: raleway;
     color: #FFFFFF;
     position: relative;
 }
@@ -254,18 +334,21 @@ li:active {
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     z-index: -1;
-    background-image: url(/img/image_stylish.png);
+    background-image: url(../img/image_stylish.png);
     filter: brightness(50%);
 }
 .download_button_2 {
     margin: 73px 0 50px 0;
     height: 58px;
-    width: 370px;
+    width: 270px;
     border: 2px solid #FFFFFF;
     background-color: transparent;
     color: white;
     font-size: 18px;
     font-weight: 600;
+}
+.banner_text .download_button_2 {
+    margin: 0;
 }
 .download_button_2:hover {
     border: 2px solid #EC7979;
@@ -280,6 +363,11 @@ li:active {
     align-self: center;
     width: 170px;
     border-top: 1px solid #FFFFFF;
+    margin-bottom: 40px;
+}
+.banner_text .white_line {
+    align-self: flex-start;
+    margin: 0;
 }
 .h5_under_white_line {
     color: #FFFFFF;
@@ -343,26 +431,28 @@ textarea {
 footer {
     height: 164px;
     background-color: black;
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 .links {
-    width: 600px;
+    width: 650px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .copyright {
-    font-family: raleway;
     color: #8d8d8d;
     margin: 0;
 }
-.links img {
+footer img {
     width: 53px;
     height: 53px;
 }
 .links img:hover {
     cursor: pointer;
+    filter: drop-shadow(0 0 15px #EC7979);
+    /* box-shadow: 0 0 20px 10px #EC7979; */
+    /* background-color: #AB4949; */
+    transition: 0.6s;
 }
