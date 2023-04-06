@@ -1,5 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 html {
-    background-color: rgb(28, 28, 28);
+    background-color: rgb(0, 0, 0);
+    scroll-behavior: smooth;
 }
 body {
     background-color: white;
@@ -8,6 +13,37 @@ body {
     position: relative;
     z-index: -2;
     font-family: raleway;
+}
+header {
+    background-color: #000000;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 2;
+}
+.navbar, .navbar_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.navbar_menu li {
+    width: 114px;
+}
+.navbar_menu li a {
+    display: block;
+    padding: 30px 30px;
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+}
+.navbar_menu li:hover {
+    background-color: #EC7979;
+    transition: 0.5s;
+}
+.navbar_menu li:active {
+    background-color: #AB4949;
 }
 .banner {
     height: 1026px;
@@ -50,8 +86,9 @@ body {
     border-radius: 10px;
     color: black;
 }
-form span {
+span {
     color: #EC7979;
+    margin: 7px;
 }
 form button {
     height: 60px;
@@ -61,6 +98,13 @@ form button {
     background-color: #EC7979;
     color: #FFFFFF;
     border-radius: 0 0 10px 10px;
+}
+.input_form {
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 50px 50px 50px;
 }
 form h4 {
     height: 90px;
@@ -90,11 +134,16 @@ form h4 {
 }
 .social_text {
     width: 470px;
-    margin-bottom: 18px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .social_content h5 {
     color: #86878B;
-    margin: 0;
+}
+.banner_content h5 {
+    margin: 20px 0 20px 0;
 }
 .content_freedom {
     display: flex;
@@ -118,13 +167,12 @@ h1 {
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
-    margin: 0;
+    margin: 30px 0 30px 0;
 }
 h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 150px;
     margin: 50px 0 0 0;
     font-size: 36px;
@@ -137,27 +185,21 @@ h3 {
     font-weight: 700;
     font-size: 30px;
     line-height: 40.85px;
-    margin: 0;
 }
 h4 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 33px;
-    margin: 10px 0 20px 0;
 }
 h5 {
     font-size: 18px;
     font-weight: 400;
     font-style: normal;
     line-height: 21px;
-    margin: 0;
 }
 .h5_under_line {
     color: #86878B;
-}
-.article_freedom h5, .box h5 {
-    margin: 0;
 }
 .red_line {
     align-self: center;
@@ -176,8 +218,10 @@ h5 {
     text-align: center;
     box-sizing: border-box;
     width: 370px;
-    padding: 0;
     transition: 1s;
+}
+.box h4 {
+    margin-bottom: 40px;
 }
 .tabs {
     display: flex;
@@ -259,10 +303,8 @@ form button:active {
 }
 ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
-li {
+.price_section li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,14 +315,14 @@ li {
     color: #86878B;
     font-size: 18px;
 }
-li:hover {
+.price_section li:hover {
     cursor: pointer;
     transform: scale(1.05);
     font-size: 20px;
     box-shadow: 0px 0px 10px #929292;
     transition: 0.6s;    
 }
-li:active {
+.price_section li:active {
     background-color: #F5F5F5;
     transform: scale(1.02);
 }
@@ -363,13 +405,12 @@ li:active {
     align-self: center;
     width: 170px;
     border-top: 1px solid #FFFFFF;
-    margin-bottom: 40px;
 }
 .banner_text .white_line {
     align-self: flex-start;
-    margin: 0;
 }
 .h5_under_white_line {
+    margin-top: 40px;
     color: #FFFFFF;
 }
 .contact_us_section {
@@ -437,22 +478,20 @@ footer {
     align-items: center;
 }
 .links {
-    width: 650px;
+    width: 670px;
     display: flex;
     justify-content: space-between;
 }
 .copyright {
     color: #8d8d8d;
-    margin: 0;
 }
 footer img {
     width: 53px;
     height: 53px;
 }
-.links img:hover {
+.links img:hover,
+.navbar>a:hover {
     cursor: pointer;
     filter: drop-shadow(0 0 15px #EC7979);
-    /* box-shadow: 0 0 20px 10px #EC7979; */
-    /* background-color: #AB4949; */
     transition: 0.6s;
 }
