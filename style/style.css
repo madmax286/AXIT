@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +16,11 @@ html {
 }
 body {
     background-color: white;
-    width: 1510px;
+    max-width: 1510px;
     margin: auto;
     position: relative;
     z-index: -2;
-    font-family: raleway;
+    font-family: 'Raleway', sans-serif;
 }
 header {
     background-color: #000000;
@@ -23,7 +31,7 @@ header {
 .navbar, .navbar_menu {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
 }
 .navbar_menu li {
@@ -33,7 +41,7 @@ header {
     display: block;
     padding: 30px 30px;
     color: #FFFFFF;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 14px;
     text-decoration: none;
@@ -92,7 +100,7 @@ span {
 }
 form button {
     height: 60px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 15px;
     background-color: #EC7979;
@@ -116,7 +124,6 @@ form h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: raleway;
     width: 1170px;
     margin: auto;
 }
@@ -160,7 +167,6 @@ form h4 {
     margin: 0 30px 0px 100px;
 }
 .price_section {
-    width: 1508px;
     background-color: #F5F5F5;
 }
 h1 {
@@ -181,13 +187,13 @@ h2 {
     line-height: 42px;
 }
 h3 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 30px;
     line-height: 40.85px;
 }
 h4 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 33px;
@@ -232,7 +238,7 @@ h5 {
 button {
     border: none;
     cursor: pointer;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     transition: 0.6s;
 }
 .tabs button {
@@ -287,7 +293,7 @@ form button:active {
     box-sizing: border-box;
 }
 .box_price div:first-child {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 24px;
     font-weight: 700;
     height: 60px;
@@ -445,7 +451,7 @@ input {
 }
 ::placeholder {
     color: #BDBDBD;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
 textarea::placeholder {
