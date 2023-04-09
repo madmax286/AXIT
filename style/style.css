@@ -44,7 +44,6 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* padding: 31px 30px; */
     color: #FFFFFF;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
@@ -129,7 +128,7 @@ form h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1170px;
+    width: 77%;
     margin: auto;
 }
 .social_section {
@@ -139,13 +138,13 @@ form h4 {
     background-color: #F8EFEF;
 }
 .social_content {
-    width: 1170px;
+    width: 77%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .social_text {
-    width: 470px;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -228,7 +227,7 @@ h5 {
 .box {
     text-align: center;
     box-sizing: border-box;
-    width: 370px;
+    width: 32%;
     transition: 1s;
 }
 .box h4 {
@@ -425,7 +424,7 @@ ul {
     color: #FFFFFF;
 }
 .contact_us_section {
-    width: 1170px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -438,7 +437,7 @@ ul {
     margin-top: 60px;
 }
 .input_contacts, .input_message {
-    width: 570px;
+    width: 49%;
     height: 255px;
     display: flex;
     flex-direction: column;
@@ -464,7 +463,6 @@ textarea::placeholder {
 }
 textarea {
     font-size: 30px;
-    width: 570px;
     height: 100%;
     border: transparent;
     border-bottom: 1px solid #BDBDBD;
@@ -489,7 +487,7 @@ footer {
     align-items: center;
 }
 .links {
-    width: 670px;
+    width: 57%;
     display: flex;
     justify-content: space-between;
 }
@@ -505,4 +503,12 @@ footer img {
     cursor: pointer;
     filter: drop-shadow(0 0 15px #EC7979);
     transition: 0.6s;
+}
+@media (max-width: 1024px) {
+    body {
+        max-width: 1024px;
+    }
+    .container, .social_content, .banner_content, .contact_us_section, .input_section {
+        width: 97%;
+    }
 }
