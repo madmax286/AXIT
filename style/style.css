@@ -10,19 +10,21 @@
     margin: 0;
     padding: 0;
 }
+:root {
+    --index: calc(1vw + 1vh)
+}
 html {
     background-color: rgb(0, 0, 0);
     scroll-behavior: smooth;
 }
 .wrapper {
     background-color: white;
-    max-width: 1510px;
     margin: auto;
     position: relative;
     z-index: 0;
     font-family: 'Raleway', sans-serif;
 }
-header {
+.header_navbar {
     background-color: #000000;
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -35,7 +37,8 @@ header {
     text-align: center;
 }
 .navbar_menu li {
-    width: 114px;
+    width: 10vw;
+    max-width: 114px;
 }
 .navbar a {
     height: 75px;
@@ -58,6 +61,7 @@ header {
     background-color: #AB4949;
 }
 .banner {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,23 +73,25 @@ header {
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     z-index: -1;
-    background-image: url(../img/image_axit.png);
+    background-image: url(../img/image.svg);
+    background-size: cover;
+    background-position: center;
     filter: brightness(50%);
 }
 .banner_content {
-    width: 77.5%;
-    margin-top: 20%;
-    margin-bottom: 10%;
+    max-width: 1170px;
+    width: 97%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 .banner_content h5 {
-    margin: 42px 0 42px 0;
+    margin: 1% 0 6% 0;
 }
 .banner_text {
     height: 100%;
     width: 57%;
+    margin-right: 2%;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -102,7 +108,7 @@ header {
 }
 span {
     color: #EC7979;
-    margin: 7px;
+    margin: 2%;
 }
 form button {
     height: 60px;
@@ -114,11 +120,10 @@ form button {
     border-radius: 0 0 10px 10px;
 }
 .input_form {
-    height: 210px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 15px 50px 75px 50px;
+    margin: 0 7% 18% 7%;
 }
 form h4 {
     height: 90px;
@@ -130,24 +135,26 @@ form h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 77.5%;
+    max-width: 1170px;
+    width: 97%;
     margin: auto;
+    margin-top: 50px;
 }
 .social_section {
-    height: 140px;
     display: flex;
     justify-content: center;
     background-color: #F8EFEF;
 }
 .social_content {
-    width: 77%;
+    max-width: 1170px;
+    width: 97%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1%;
 }
 .social_text {
     width: 40%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -176,34 +183,42 @@ form h4 {
 .price_section {
     background-color: #F5F5F5;
 }
+.price_section h2 {
+    margin-top: 50px;
+}
+.price_section .container{
+    margin-top: 0;
+}
 h1 {
     font-style: normal;
     font-weight: 500;
-    font-size: 48px;
-    margin: 50px 0 55px 0;
+    font-size: calc(var(--index) *1.9);
+    margin: 8% 0 9% 0;
 }
 h2 {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 150px;
-    margin: 50px 0 0 0;
     font-size: 36px;
     font-weight: 400;
     font-style: normal;
     line-height: 42px;
+    text-align: center;
 }
 h3 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 30px;
     line-height: 40.85px;
+    margin: 5% 0 5% 0;
 }
 h4 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 33px;
+    margin-bottom: 5%;
 }
 h5 {
     font-size: 18px;
@@ -224,7 +239,7 @@ h5 {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 75px;
+    margin-top: 71px;
     margin-bottom: 50px;
 }
 .box {
@@ -240,7 +255,7 @@ h5 {
     display: flex;
     overflow: hidden;
     width: 100%;
-    margin-top: 99px;
+    margin-top: 50px;
 }
 button {
     border: none;
@@ -252,6 +267,7 @@ button {
     height: 40px;
     width: 17.1%;
     background-color: white;
+    font-size: 14px;
 }
 .tabs button:hover:not(.tab_1){
     background-color: #C6CBCD;
@@ -273,11 +289,12 @@ button {
 }
 .download_button {
     height: 58px;
-    width: 270px;
+    width: 48%;
     background-color: #EC7979;
     color: white;
     font-size: 18px;
     font-weight: 600;
+    margin: 5% 0 5% 0;
 }
 .download_button:hover, 
 .send_message_button:hover, 
@@ -331,7 +348,6 @@ ul {
 .price_section li:hover {
     cursor: pointer;
     transform: scale(1.05);
-    font-size: 20px;
     box-shadow: 0px 0px 10px #929292;
     transition: 0.6s;    
 }
@@ -354,6 +370,10 @@ ul {
     flex-direction: column;
     text-align: left;
 }
+.manager h4 {
+    margin-bottom: 10%;
+}
+
 .customer img {
     align-self: flex-start;
     margin-right: 30px;
@@ -383,18 +403,23 @@ ul {
     color: #FFFFFF;
     position: relative;
 }
+.axure h2 {
+    margin-top: 50px;
+}
 .axure::before {
     content: '';
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     z-index: -1;
-    background-image: url(../img/image_stylish.png);
+    background-image: url(../img/image_axure.svg);
+    background-size: cover;
+    background-position: center;
     filter: brightness(50%);
 }
 .download_button_2 {
-    margin: 73px 0 50px 0;
+    margin: 5% 0 50px 0;
     height: 58px;
-    width: 270px;
+    width: 370px;
     border: 2px solid #FFFFFF;
     background-color: transparent;
     color: white;
@@ -403,6 +428,7 @@ ul {
 }
 .banner_text .download_button_2 {
     margin: 0;
+    width: 40%;
 }
 .download_button_2:hover {
     border: 2px solid #EC7979;
@@ -417,12 +443,12 @@ ul {
     align-self: center;
     width: 170px;
     border-top: 1px solid #FFFFFF;
+    margin-bottom: 40px;
 }
 .banner_text .white_line {
     align-self: flex-start;
 }
 .h5_under_white_line {
-    margin-top: 40px;
     color: #FFFFFF;
 }
 .contact_us_section {
@@ -461,7 +487,10 @@ input {
     font-size: 14px;
 }
 textarea::placeholder {
-    transform: translateY(24px);
+    transform: translateY(10px);
+}
+input::placeholder {
+    transform: translateY(-5px);
 }
 textarea {
     font-size: 30px;
@@ -470,6 +499,7 @@ textarea {
     border-bottom: 1px solid #BDBDBD;
     resize: none;
     outline: none;
+    padding-top: 10px;
 }
 .send_message_button {
     width: 370px;
@@ -480,12 +510,12 @@ textarea {
     font-weight: 600;
     margin: 50px 0;
 }
-footer {
+.footer_links {
     height: 164px;
     background-color: black;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 footer .links {
@@ -506,14 +536,162 @@ footer img {
 }
 
 @media (max-width: 1024px) {
-    body {
-        max-width: 1024px;
+
+    h2 {
+        font-size: 24px;
+        height: 120px;
     }
-    .container, .social_content, .banner_content, .contact_us_section, .input_section {
-        width: 97%;
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 24.51px;
+    }
+    h5 {
+        font-size: 14px;
+        line-height: 16.44px;
+    }
+    .banner_text {
+        margin-left: 7%;
+    }
+    .banner_text img {
+        width: 20vw;
+    }
+    .white_line {
+        width: 142px;
+        margin-bottom: 31px;
+    }
+    .red_line {
+        width: 142px;
+        margin-bottom: 32px;
+    }
+    .social_content img {
+        width: 64px;
     }
     .content_freedom img {
         width: 398px;
-        height: 385px;
+        height: auto;
+    }
+    .group_box {
+        margin-top: 32px;
+    }
+    .axure .download_button_2, .send_message_button {
+        width: 318px;
+    }
+    footer img {
+        width: 45px;
+        height: 45px;
+    }
+        /* h2 {
+        font-weight: 700;
+    } */
+
+}
+@media (max-width: 800px) {
+
+    .container {
+        width: 90%;
+        margin-top: 0;
+    }
+    h1 {
+        font-size: 36px;
+        text-align: center;
+        margin: 0;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 28.18px;
+        height: 120px;
+    }
+    h3 {
+        font-size: 18px;
+        line-height: 24.51px;
+        margin-bottom: 20px;
+    }
+    h4, h5 {
+        font-size: 14px;
+        line-height: 16.44px;
+        margin-bottom: 0;
+    }
+    .banner {
+        height: 155vh;
+        align-items: flex-start;
+    }
+    .banner_text {
+        width: 100%;
+        margin: 50% 0 20% 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner_content {
+        width: 90vw;
+    }
+    /* .input_form {
+        margin: 15px 50px 75px 50px;
+    }     */
+    .group_box {
+        margin-top: 0;
+    }
+    .navbar_menu, .content_freedom img, header, .banner_text img {
+        display: none;
+    }
+    .social_content, .banner_content, .group_box, .input_section {
+        flex-direction: column;
+    }
+    .social_content img,  footer img {
+        width: 28px;
+        height: 28px;
+    }
+    .banner_content form, .box, .download_button_2, .send_message_button, .download_button, footer .links, .input_section form {
+        width: 100%;
+    }
+    .download_button, .download_button_2 {
+        height: 50px;
+    }
+    .banner_text .download_button_2 {
+        width: 288px;
+        margin-top: 42px;
+    }
+    .axure .download_button_2 {
+        width: 287px;
+        margin-top: 66px;
+    }
+    .box {
+        margin-top: 8%;
+    }
+    .article_freedom {
+        margin: 5%;
+        text-align: center;
+    }
+    .tabs button {
+        width: calc(100%/3);
+    }
+    .tab_4 {
+        width: 0;
+    }
+    .h5_under_line, .h5_under_white_line {
+        text-align: center;
+    }
+    .axure {
+        padding: 0 17px;
+    }
+    .container h2, .axure h2 {
+        margin-top: 0;
+    }
+    .white_line {
+        width: 134px;
+        margin-bottom: 16px;
+        align-self: center;
+    }
+    .banner_text .white_line {
+        align-self: center;
+        margin: 43px 0 42px 0;
+    }    
+    .input_message {
+        margin-top: 40px;
+    }
+    footer .links {
+        justify-content: space-evenly;
     }
 }
