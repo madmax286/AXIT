@@ -30,6 +30,9 @@ html {
     top: 0; left: 0; right: 0;
     z-index: 2;
 }
+#burger, .container_menu {
+    display: none;
+}
 .navbar, .navbar_menu {
     display: flex;
     align-items: center;
@@ -535,7 +538,7 @@ footer img {
     transition: 0.6s;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
     h2 {
         font-size: 24px;
@@ -588,14 +591,79 @@ footer img {
     } */
 
 }
-@media (max-width: 800px) {
+@media screen and (max-width: 767px) {
 
     .container {
         width: 90%;
         margin-top: 0;
     }
+    /* -------------- бургер меню -------------------------*/
+    [for=burger] {
+        position: absolute;
+        top: 0; right: 120px;
+    }
+    .container_menu {
+        display: block;
+        width: 100%;
+    }
+    .container_menu nav {
+        display: block;
+        position: absolute;
+        top: -100vh;
+        z-index: -2;
+    }
+    #burger:checked + label img {
+        display: none;
+    }
+    #burger:checked + label + nav {
+        display: block;
+        position: absolute;
+        top: 56px;
+        transition: .6s ease-in-out;
+    }
+    #burger:checked + [for=burger]::before {
+        content: url(../icons/close.svg);
+        position: absolute;
+        top: 0; left: 58px;
+    }
+    .header_menu {
+        background-color: #000000;
+        width: 100%;
+        height: 100vh;
+    }
+    .header_link {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .header_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_list li a {
+        height: 68px;
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* --------------------------------------------------- */
+    .navbar {
+        justify-content: flex-start;
+    }
+    .navbar img {
+        width: 130px;
+        height: 56px;
+        position: absolute;
+        transform: translateX(20px);
+    }
+    .navbar a {
+        height: 56px;        
+    }  
     h1 {
-        font-size: 36px;
+        font-size: calc(var(--index) *3);
         text-align: center;
         margin: 0;
     }
@@ -604,7 +672,7 @@ footer img {
         line-height: 28.18px;
         height: 120px;
     }
-    h3 {
+    h3, .social_text h4 {
         font-size: 18px;
         line-height: 24.51px;
         margin-bottom: 20px;
@@ -615,7 +683,7 @@ footer img {
         margin-bottom: 0;
     }
     .banner {
-        height: 155vh;
+        height: 100%;
         align-items: flex-start;
     }
     .banner_text {
@@ -624,16 +692,16 @@ footer img {
         justify-content: center;
         align-items: center;
     }
-    .banner_content {
+    .banner_content, .social_content {
         width: 90vw;
     }
-    /* .input_form {
-        margin: 15px 50px 75px 50px;
-    }     */
+    .banner_content form {
+        margin-bottom: 20%;
+    }
     .group_box {
         margin-top: 0;
     }
-    .navbar_menu, .content_freedom img, header, .banner_text img {
+    .navbar_menu, .content_freedom img, .banner_text img {
         display: none;
     }
     .social_content, .banner_content, .group_box, .input_section {
@@ -643,19 +711,27 @@ footer img {
         width: 28px;
         height: 28px;
     }
-    .banner_content form, .box, .download_button_2, .send_message_button, .download_button, footer .links, .input_section form {
+    .banner_content form, .box, .send_message_button, .download_button, footer .links, .input_section form, .social_text, .social_content .links {
         width: 100%;
     }
     .download_button, .download_button_2 {
         height: 50px;
     }
     .banner_text .download_button_2 {
-        width: 288px;
+        width: 90vw;
+        max-width: 287px;
         margin-top: 42px;
     }
+    .social_content {
+        padding: 10% 0;
+    }
     .axure .download_button_2 {
-        width: 287px;
+        width: 90vw;
+        max-width: 287px;
         margin-top: 66px;
+    }
+    .social_text h5 {
+        margin-bottom: 8%;
     }
     .box {
         margin-top: 8%;
@@ -670,7 +746,7 @@ footer img {
     .tab_4 {
         width: 0;
     }
-    .h5_under_line, .h5_under_white_line {
+    .h5_under_line, .h5_under_white_line, .social_content {
         text-align: center;
     }
     .axure {
@@ -691,7 +767,7 @@ footer img {
     .input_message {
         margin-top: 40px;
     }
-    footer .links {
+    footer .links, .social_content .links {
         justify-content: space-evenly;
     }
 }
