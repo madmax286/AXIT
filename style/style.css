@@ -30,7 +30,7 @@ html {
     top: 0; left: 0; right: 0;
     z-index: 2;
 }
-#burger, .container_menu {
+#burger, .container_menu, .swiper-wrapper, .swiper-pagination {
     display: none;
 }
 .navbar, .navbar_menu {
@@ -769,5 +769,8 @@ footer img {
     }
     footer .links, .social_content .links {
         justify-content: space-evenly;
+    }
+    .swiper-pagination {
+        display: block;
     }
 }
