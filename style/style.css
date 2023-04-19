@@ -87,6 +87,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-top: 10%;
 }
 .banner_content h5 {
     margin: 1% 0 6% 0;
@@ -770,7 +771,24 @@ footer img {
     footer .links, .social_content .links {
         justify-content: space-evenly;
     }
-    .swiper-pagination {
-        display: block;
+/* ----------------------Custom Pagination--------------------------- */
+    .customer {
+        margin-bottom: 30px;
     }
+    .swiper-pagination {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: -10px;        
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #86878B;
+    }
+    span.swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        border: 1px solid #86878B;
+        opacity: 1;
+        background-color: #fff;
+        margin-left: 30px;
+    } 
 }
